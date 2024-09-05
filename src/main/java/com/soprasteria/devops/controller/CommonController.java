@@ -11,7 +11,7 @@ public class CommonController {
 	@GetMapping(value="/hello-world")
 	public BaseObj helloWorld() {
 		
-		return new BaseObj("2034", "DEVOPS Accelerator", "Yozy Technologies LLP");
+		return new BaseObj("2034", "DEVOPS Accelerator test branch", "Yozy Technologies LLPtest");
 	}
 	@GetMapping(value="/hello-world/yozyme")
 	public BaseObj Aravind() {
