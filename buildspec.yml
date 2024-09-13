@@ -13,12 +13,10 @@ phases:
   build:
     commands:
       - echo Building the project using Maven...
-      - cd target
-      - sudo tar -czvf ../pln5000265.tar.gz *
-      - mv ../pln5000265.tar.gz .
+      - sudo tar -czvf pln5000266.tar.gz *
   post_build:
     commands:
       - echo Build completed. Artifacts are ready for deployment.
 artifacts:
   files:
-    - pln5000265.tar.gz
+    - pln5000266.tar.gz
