@@ -15,12 +15,12 @@ phases:
       - echo Building the project using Maven...
       - mvn clean package -Xmx3072m -Dmaven.test.skip=true
       - cd target
-      - sudo tar -czvf ../pln5000263.tar.gz *
-      - mv ../pln5000263.tar.gz .
+      - sudo tar -czvf ../pln5000264.tar.gz *
+      - mv ../pln5000264.tar.gz .
   post_build:
     commands:
       - echo Build completed. Artifacts are ready for deployment.
 artifacts:
   files:
-    - pln5000263.tar.gz
+    - pln5000264.tar.gz
   discard-paths: true
