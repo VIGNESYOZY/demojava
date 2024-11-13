@@ -1,0 +1,25 @@
+version: '0.2'
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+    commands:
+      - echo Setting up Maven...
+      - mvn --version
+  pre_build:
+    commands:
+      - 'echo Pre-build phase: Cleaning workspace...'
+      - 'mvn sonar:sonar -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.host.url=${SONAR_HOST_URL} -Dsonar.login=${SONAR_TOKEN}'
+      - mvn clean
+  build:
+    commands:
+      - echo Building the project using Maven...
+      - mvn package
+      - cd target
+      - sudo tar -czvf ../PLN1000706.tar.gz *
+  post_build:
+    commands:
+      - echo Build completed. Artifacts are ready for deployment.
+artifacts:
+  files:
+    - PLN1000706.tar.gz
