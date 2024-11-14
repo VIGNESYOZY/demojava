@@ -9,18 +9,18 @@ phases:
   pre_build:
     commands:
       - 'echo Pre-build phase: Cleaning workspace...'
-      - 'mvn sonar:sonar -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.host.url=${SONAR_HOST_URL} -Dsonar.login=${SONAR_TOKEN}'
+      - 'mvn clean verify sonar:sonar -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.host.url=${SONAR_HOST_URL} -Dsonar.login=${SONAR_TOKEN}'
       - mvn clean
   build:
     commands:
       - echo Building the project using Maven...
-      - echo ID_HvyApzu4
+      - echo ID_GN80WACE
       - mvn package
       - cd target
-      - sudo tar -czvf ../PLN1000708.tar.gz *
+      - sudo tar -czvf ../PLN1000709.tar.gz *
   post_build:
     commands:
       - echo Build completed. Artifacts are ready for deployment.
 artifacts:
   files:
-    - PLN1000708.tar.gz
+    - PLN1000709.tar.gz
