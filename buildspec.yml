@@ -14,13 +14,13 @@ phases:
   build:
     commands:
       - echo Building the project using Maven...
-      - echo ID_nfLfAjY8
+      - echo ID_HvyApzu4
       - mvn package
       - cd target
-      - sudo tar -czvf ../PLN1000707.tar.gz *
+      - sudo tar -czvf ../PLN1000708.tar.gz *
   post_build:
     commands:
       - echo Build completed. Artifacts are ready for deployment.
 artifacts:
   files:
-    - PLN1000707.tar.gz
+    - PLN1000708.tar.gz
