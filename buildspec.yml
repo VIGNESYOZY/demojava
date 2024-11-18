@@ -14,7 +14,7 @@ phases:
   build:
     commands:
       - echo Building the project using Maven...
-      - echo ID_MQ5OqJUf
+      - echo ID_hkdP4PmF
       - mvn package
       - cd target
       - sudo tar -czvf ../PLN1000709.tar.gz *
